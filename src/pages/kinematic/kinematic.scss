@@ -1,0 +1,121 @@
+page-kinematic {
+    .kinematic {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .kinematic__img {
+        height: 90vh;
+    }
+    .kinematic__img.left {
+        float: left;
+    }
+    .kinematic__img.right {
+        float: right;
+    }
+    .kinematic__img_container {}
+    .kinematic__characters {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+    }
+    .kinematic__text {
+        height: 27vh;
+        background-color: rgba(0, 0, 0, 0.78);
+        color: white;
+        border-radius: 10px;
+        border: 1px solid yellow;
+        margin: 0;
+    }
+    .kinematic__characters_name {
+        position: absolute;
+        right: 8vh;
+        bottom: 27vh;
+        background-color: rgba(0, 0, 0, 0.78);
+        color: white;
+        border-radius: 10px;
+        border: 1px solid yellow;
+        z-index: 1;
+        margin: 0;
+        .kinematic__name_container {
+            padding: 0;
+            p {
+                margin: 7px;
+            }
+        }
+    }
+    .kinematic__characters_name.left {
+        left: unset;
+        right: 8vh;
+    }
+    .kinematic__characters_name.right {
+        right: unset;
+        left: 8vh;
+    }
+    .kinematic__change_text {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .kinematic__dialogue {
+        width: 90%;
+        margin: 10px 5%;
+    }
+    ion-row.dialogue.row {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.78);
+        color: white;
+        border-top: 1px solid yellow;
+        height: 30vh;
+    }
+    .place {
+        width: 100%;
+        height: 100%;
+    }
+    .add_character_black_screen {
+        display: none;
+    }
+    .add_character_black_screen.show {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: block;
+        .add_character {
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 50vh;
+            transform: translateY(-50%);
+            max-height: 30vh;
+            border-radius: 10px;
+            border: 2px solid white;
+            background-color: grey;
+            padding: 3px;
+            overflow: hidden;
+            display: flex;
+            img.character_sprite {
+                width: 20%;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border: 2px solid white;
+            }
+            .infos {
+                border: 2px solid white;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-left: 0;
+                padding: 0 10px;
+            }
+        }
+        button.ok_button {
+            width: 20%;
+            margin-left: 40%;
+        }
+    }
+}

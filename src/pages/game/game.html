@@ -1,0 +1,31 @@
+<ion-content class="interface">
+    <audio id="audioPlayer" src="../assets/musics/music1.mp3"></audio>
+    <audio id="audioClick" src="../assets/musics/clic.wav"></audio>
+    <img src="{{place.sprite}}" alt="place" class="place">
+    <ion-row class="interface__top">
+        <ion-col class="interface__col-lg-1">
+            <button class="game-button" (click)="playSound()" [navPush]="mapPush"><ion-icon name="map"></ion-icon></button>
+        </ion-col>
+        <ion-col col-5 *ngIf="isQuestsFinished">
+            <button class="game-button new-place" (click)="doChoice()">Passer au nouveau lieu</button>
+        </ion-col>
+        <ion-col class="">
+            <button class="settings-button game-button" (click)="playSound()" [navPush]="parametersPush"><ion-icon name="settings"></ion-icon></button>
+        </ion-col>
+    </ion-row>
+    <ion-row class="interface__bottom">
+        <ion-col class="interface__col-lg-1 interface__offset-lg-8">
+            <button class="game-button" (click)="playSound()" [navPush]="questsPush" [navParams]="questsParams"><ion-icon name="list-box"></ion-icon></button>
+        </ion-col>
+        <ion-col class="interface__col-lg-1 interface__offset-lg-0">
+            <button class="game-button" (click)="playSound()" [navPush]="inventoryPush"><ion-icon name="cart"></ion-icon></button>
+        </ion-col>
+        <ion-col class="interface__col-lg-1 interface__offset-lg-0">
+            <button class="game-button" (click)="playSound()" [navPush]="characterGuidePush"><ion-icon name="contact"></ion-icon></button>
+        </ion-col>
+        <ion-col class="interface__col-lg-1 interface__offset-lg-0">
+            <button class="game-button" (click)="playSound()"><ion-icon name="navigate"></ion-icon></button>
+        </ion-col>
+    </ion-row>
+
+</ion-content>

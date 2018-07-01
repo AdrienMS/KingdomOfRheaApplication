@@ -1,0 +1,50 @@
+page-choice {
+    .content-choice {
+        text-align: center;
+        border: 1px solid black;
+        background-size: cover;
+        background-position-x: center;
+        .desc {
+            background-color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            p.action {
+                margin-top: 50vh;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .b1 {
+        background-image: url("../assets/imgs/ville1.jpg");
+    }
+    .b2 {
+        background-image: url("../assets/imgs/ville2.jpg");
+    }
+    .b3 {
+        background-image: url("../assets/imgs/ville3.jpg");
+    }
+    .b4 {
+        background-image: url("../assets/imgs/ville4.jpg");
+    }
+    .b5 {
+        background-image: url("../assets/imgs/ville5.jpg");
+    }
+    .b6 {
+        background-image: url("../assets/imgs/ville6.jpg");
+    }
+    .b7 {
+        background-image: url("../assets/imgs/ville7.jpg");
+    }
+    .b8 {
+        background-image: url("../assets/imgs/ville8.jpg");
+    }
+    .b9 {
+        background-image: url("../assets/imgs/ville9.png");
+    }
+    .b10 {
+        background-image: url("../assets/imgs/ville10.jpg");
+    }
+}

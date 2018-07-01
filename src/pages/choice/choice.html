@@ -1,0 +1,10 @@
+<ion-content>
+    <ion-row style="width: 100%; height: 100%;">
+        <ion-col *ngFor="let choice of choices; let i = index" (click)="clickChoice(i)" class="col content-choice {{choice.image}}" id="content_choice_{{i}}">
+            <div class="desc">
+                <p class="action">{{choice.text}}<br> {{displayTimeChoice[i]}} <span class="bonus">- {{displayTimeBonus[i]}}</span>
+                </p>
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-content>

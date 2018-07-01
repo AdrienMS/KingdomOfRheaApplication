@@ -1,0 +1,103 @@
+page-inventory {
+    ion-row.inventory {
+        background-color: #333;
+        h2.title {
+            text-align: center;
+            font-family: Medieval;
+            font-size: 2.5vw;
+            width: 100vw;
+        }
+        h2.title.main {
+            position: absolute;
+            top: 15px;
+            margin: 0;
+            width: 20vw;
+            left: 40vw;
+            z-index: 2;
+            padding: 5px 0px;
+            background-color: #b6611a;
+            border-style: outset;
+            border-bottom: 3px solid #744424;
+            border-left: 2px solid #97521b;
+            border-top: 0;
+            border-right: 1px solid #744424;
+            border-radius: 2px;
+            color: white;
+        }
+        ion-col.inventory-content-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            img.inventory-img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        ion-col.inventory-stuff {
+            border: 1px solid black;
+            margin-top: 30px;
+            background-color: #b6611a;
+            ion-row.inventory-content-stuff {
+                width: 90vw;
+                margin-left: 5vw;
+                height: 85vh;
+                margin-top: 5vh;
+                h2.title {
+                    margin: 0;
+                    text-align: center;
+                    border-bottom: 1px solid black;
+                    margin-bottom: 5px;
+                    font-family: Medieval;
+                    font-size: 2.5vw;
+                    width: -webkit-fill-available;
+                }
+                ion-col.inventory-content-equiped-stuff {
+                    overflow-y: hidden;
+                    height: 74vh;
+                    border: 1px solid black;
+                    background-color: rgba(200, 200, 200, 1);
+                    ion-row.inventory-in-equiped-stuff {
+                        width: 90%;
+                        margin-left: 5%;
+                        overflow-y: scroll;
+                        height: 66vh;
+                        ion-item.inventory-equiped.item.item-block.item-md {
+                            height: fit-content;
+                            border: 1px solid black;
+                            background-color: white;
+                        }
+                    }
+                    ion-row.inventory-equiped {
+                        width: 80%;
+                        margin-left: 10%;
+                    }
+                }
+                ion-col.inventory-content-bag-stuff {
+                    height: 74vh;
+                    border: 1px solid black;
+                    background-color: rgba(200, 200, 200, 1);
+                    ion-col.item {
+                        border: 1px solid black;
+                        background-color: white;
+                    }
+                    div.scroll-content-inventory {
+                        overflow-y: scroll;
+                        height: 73vh;
+                    }
+                }
+            }
+        }
+    }
+    button.button-close {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        background-color: #333;
+        border: 1px solid black;
+        color: white;
+        font-family: Medieval;
+        letter-spacing: 3px;
+    }
+}

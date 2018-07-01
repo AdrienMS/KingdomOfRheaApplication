@@ -1,0 +1,35 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>character_guide</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: rgba(0,0,0,0.7);">
+    <div class="characters">
+        <div class="character" *ngFor="let character of displayCharacters">
+            <div class="content-characters" *ngIf="character.unlock === true; else lockBlock">
+                <div id="img">
+                    <img src="{{character.sprites[0]}}" alt="{{character.name}}">
+                </div>
+                <div class="infos">
+                    <p class="name">{{character.name}}</p>
+                    <p class="desc">{{character.desc}}</p>
+                </div>
+            </div>
+            <ng-template #lockBlock>
+                <div class="content-characters">
+                    <div id="img">
+                        <img src="../../assets/imgs/character_unlock.png" alt="lock character">
+                    </div>
+                    <div class="infos">
+                        <p class="name">???</p>
+                        <p class="desc">Vous n'avez pas encore débloqué ce personnage</p>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-content id="sending-characters">
+    <ion-row class="quest_item">
+        <img class="quest_item__img" src="../assets/imgs/quest_body.png" />
+        <ion-row class="quest_content">
+            <ion-col col-1></ion-col>
+            <ion-col col-10 style="overflow: scroll;">
+                <ion-row class="quest_item__title">
+                    <ion-col>
+                        <p class="sending-characters__content__id-quest" id="id_quest"></p>
+                        <h1 id="title_quest" class="text--heading" style="font-size:5vh;padding: 0;margin: 0;">{{quest.title}}</h1>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="quest_item__description">
+                    <ion-col>
+                        <p class="text" id="description_quest">{{quest.description}}</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="quest_item__loot">
+                    <ion-col class="loot" *ngFor="let loot of loots">
+                        <p class="name">{{loot.name}}</p>
+                        <img src="{{loot.sprite}}" alt="loot" class="loot_item" />
+                        <div class="desc">
+                            <p class="bonus" *ngIf="loot.type === 'quest'; else LootTravelBlock">{{loot.bonus * 100}}% plus rapide pour les quêtes</p>
+                            <ng-template #LootTravelBlock>
+                                <p class="bonus">{{loot.bonus * 100}}% plus rapide pour les voyages</p>
+                            </ng-template>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="quest.do_quest === false && quest.validate === false">
+                    <ion-col>
+                        <p class="text">Combien de personnages voulez-vous envoyer ?</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="quest.do_quest === false && quest.validate === false">
+                    <ion-col>
+                        <ion-row>
+                            <ion-col *ngFor="let button of buttons; let i = index">
+                                <button ion-button primary class="text quest_item__button" id="{{button}}" (click)="send_characters(i+1)">{{i+1}}</button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="quest.do_quest">
+                    <ion-col>
+                        <p class="text" id="time_quest">{{time_quest}}</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <button ion-button primary class="text quest_item__button" (click)="close_quest()">Close</button>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+            <ion-col col-1></ion-col>
+        </ion-row>
+    </ion-row>
+</ion-content>

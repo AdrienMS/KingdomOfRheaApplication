@@ -1,0 +1,39 @@
+page-stuff {
+    div.stuff {
+        display: flex;
+        img {
+            width: 30vw;
+            height: 30vw;
+            border: 1px solid;
+        }
+        div.desc {
+            border: 1px solid;
+            width: 70vw;
+            padding: 1vh 5vw;
+        }
+    }
+    .limit {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        .limit-content {
+            position: absolute;
+            top: 50vh;
+            transform: translateY(-50%);
+            width: 50vw;
+            left: 25vw;
+            p.text {
+                text-align: center;
+                color: white;
+                font-size: 4vh;
+            }
+            button.close {
+                width: 20%;
+                margin-left: 40%;
+            }
+        }
+    }
+}

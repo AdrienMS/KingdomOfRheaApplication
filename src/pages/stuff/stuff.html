@@ -1,0 +1,33 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{stuff.name}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="stuff">
+        <img src="{{stuff.sprite}}" alt="stuff" />
+        <div class="desc">
+            <p *ngIf="stuff.type === 'quest'; else travelBlock">
+                Bonus : {{stuff.bonus * 100}}% plus rapide pour les quêtes.
+            </p>
+            <ng-template #travelBlock>
+                Bonus : {{stuff.bonus * 100}}% plus rapide pour les voyages.
+            </ng-template>
+            <p class="desc">{{stuff.desc}}</p>
+            <ion-item>
+                <ion-label>Equiped</ion-label>
+                <ion-checkbox color="dark" (click)="change()" id="checkbox"></ion-checkbox>
+            </ion-item>
+        </div>
+    </div>
+    <div class="limit" *ngIf="limit === true">
+        <div class="limit-content">
+            <p class="text">Vous ne pouvez équipez que {{limitStuff}} équipements</p>
+            <button ion-button class="close" (click)="closeLimit()">Fermer</button>
+        </div>
+    </div>
+</ion-content>

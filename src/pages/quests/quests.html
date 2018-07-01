@@ -1,0 +1,27 @@
+<ion-content>
+    <img src="../assets/imgs/quest_board.png" class="quests__img" />
+    <ion-row class="quests__list">
+        <ion-col class="quests__container">
+            <ion-row class="quests__item" *ngFor="let quest of quests; let i = index" [navPush]="questPush" [navParams]="questParams[i]" id="quests_item_{{i}}">
+                <ion-col>
+                    <ion-row class="quests__quest_information">
+                        <ion-col>
+                            <p class="text quests__quest_title">{{quest.title}}</p>
+                        </ion-col>
+                        <ion-col class="quests__quest_time_container">
+                            <p class="text quests__quest_time">{{questTime[i]}}</p>
+                            <p *ngIf="quest.validate; else TextNotValidateBlock" class="text quests__quest_status">Validé</p>
+                            <ng-template #TextNotValidateBlock>
+                                <p *ngIf="quest.start != null; else TextNotStartBlock" class="text quests__quest_status">En cours</p>
+                                <ng-template #TextNotStartBlock>
+                                    <p class="text quests__quest_status"></p>
+                                </ng-template>
+                            </ng-template>
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
+    <button ion-button color="light" clear full class="quests__close__button" (click)="quests_close()"></button>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>parameters</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="sound">
+        <h2>Son</h2>
+        <div class="music">
+            <p>Musique</p>
+            <div class="slidecontainer">
+                <input type="range" min="0" max="100" value="{{music}}" [(ngModel)]="music" class="slider" id="myRange" (change)="changeSoundVolume('music', music)" />
+                <button class="mute" (click)="changeSoundVolumeWithButton('music', muteMusic)">
+                  <ion-icon *ngIf="muteMusic; else MuteMusicBlock" name="volume-off"></ion-icon>
+                  <ng-template #MuteMusicBlock>
+                      <ion-icon name="volume-up"></ion-icon>
+                  </ng-template>
+                </button>
+            </div>
+        </div>
+        <div class="effect">
+            <p>Effets</p>
+            <div class="slidecontainer">
+                <input type="range" min="0" max="100" value="{{effect}}" [(ngModel)]="effect" class="slider" id="myRange" (change)="changeSoundVolume('effect', effect)" />
+                <button class="mute" (click)="changeSoundVolumeWithButton('effect', muteEffect)">
+                  <ion-icon *ngIf="muteEffect; else MuteEffectBlock" name="volume-off"></ion-icon>
+                  <ng-template #MuteEffectBlock>
+                      <ion-icon name="volume-up"></ion-icon>
+                  </ng-template>
+                </button>
+            </div>
+        </div>
+    </div>
+</ion-content>

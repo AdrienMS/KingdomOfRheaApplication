@@ -1,0 +1,64 @@
+page-quest {
+    #sending-characters {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .quest_content {
+        width: 100%;
+        padding-top: 10vh;
+        padding-bottom: 11vh;
+        overflow: hidden;
+    }
+    .quest_item {
+        transform: translateY(-50%);
+        height: 90vh;
+        width: 80%;
+        margin-left: 10%;
+        position: absolute;
+        top: 50vh;
+    }
+    .quest_item__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .quest_item__row {
+        height: 70%;
+    }
+    .row.quest_item__title {}
+    .row.quest_item__description {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #question_quest {
+        display: flex;
+    }
+    #buttons_quest {
+        display: flex;
+    }
+    .quest_item__button {
+        width: 100%;
+        display: inline-block;
+    }
+    #time_left_quest {
+        display: flex;
+    }
+    .loot {
+        max-width: 20vw;
+        border: 1px solid black;
+        background-color: #333;
+        p.name {
+            color: white;
+            text-align: center;
+        }
+        img.loot_item {
+            border: 1px solid;
+        }
+        p.bonus {
+            color: white;
+        }
+    }
+}

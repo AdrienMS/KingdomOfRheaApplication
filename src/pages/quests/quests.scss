@@ -1,0 +1,75 @@
+page-quests {
+    .quests {
+        display: none;
+    }
+    .quests.show {
+        display: block;
+        position: absolute;
+        top: 50vh;
+        transform: translateY(-50%);
+        width: 80%;
+        margin-left: 10%;
+        height: 90vh;
+    }
+    .quests__img {
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        top: 0;
+        height: 100%;
+    }
+    .quests__list {
+        margin-top: 11vh;
+    }
+    .quests__container {
+        margin-left: 10%;
+        overflow-y: scroll;
+        height: 66vh;
+        margin-right: 10%;
+    }
+    .quests__item {
+        height: 20vh;
+        margin: 6px 0;
+        width: 100%;
+        border: 1px solid black;
+        background-color: white;
+    }
+    .quest__item.validate {
+        background-color: green;
+    }
+    .quest__item.do_quest {
+        background-color: blue;
+    }
+    .quests__quest_information {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .quests__quest_title {
+        margin-top: 10px;
+        margin-left: 10px;
+        color: black;
+    }
+    .quests__quest_time_container {
+        border-left: 1px solid black;
+        height: 80%;
+        margin-top: 1.5vh;
+        text-align: center;
+    }
+    .quests__quest_time {
+        color: black;
+    }
+    .quests__quest_status {
+        color: black;
+    }
+    .quests__close {
+        margin-top: 4vh;
+        height: 7vh;
+    }
+    .quests__close__button {
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        left: 25%;
+    }
+}

@@ -1,0 +1,33 @@
+page-travel {
+    .scroll-content {
+        background-color: black;
+    }
+    .title {
+        text-align: center;
+        margin-top: 20px;
+        color: white;
+    }
+    .travel {
+        display: flex;
+        width: 80%;
+        margin-left: 10%;
+        position: absolute;
+        top: 0;
+        margin-top: 50vh;
+        transform: translateY(-50%);
+        img.city {
+            width: 10%;
+            height: 10vw;
+            border-bottom: 2px solid white;
+        }
+        .progress {
+            width: 80%;
+            border-bottom: 2px solid white;
+            img.walk {
+                position: absolute;
+                height: 9.7vw;
+                top: 0;
+            }
+        }
+    }
+}

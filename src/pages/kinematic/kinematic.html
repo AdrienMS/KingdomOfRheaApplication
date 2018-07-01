@@ -1,0 +1,24 @@
+<ion-content (click)="change()">
+    <img src="{{place.sprite}}" alt="place" class="place">
+    <div class="kinematic__characters">
+        <img src="{{character.sprite}}" class="kinematic__img {{position}}" id="kinematic__img">
+    </div>
+    <ion-row class="kinematic__characters_name {{position}}">
+        <ion-col class="kinematic__name_container">
+            <p class="kinematic__name" id="kinematic__name">{{character.name}}</p>
+        </ion-col>
+    </ion-row>
+    <ion-row class="dialogue">
+        <p class="kinematic__dialogue">{{current_dialogue}}</p>
+    </ion-row>
+</ion-content>
+<div class="add_character_black_screen" id="add_character">
+    <div class="add_character">
+        <img *ngIf="add_character != null" src="{{add_character.sprite}}" alt="character" class="character_sprite" />
+        <div class="infos">
+            <p class="get_char" *ngIf="add_character != null">{{add_character.name}} se joint à votre équipe !</p>
+            <p class="more">Vous pouvez en savoir plus sur ce personnage en consultant le guide des personnages</p>
+        </div>
+    </div>
+    <button ion-button class="ok_button" (click)="closeAddCharacter()">OK</button>
+</div>

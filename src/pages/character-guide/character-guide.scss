@@ -1,0 +1,46 @@
+page-character-guide {
+    .characters {
+        height: 80vh;
+        width: 100%;
+        overflow-x: scroll;
+        display: -webkit-inline-box;
+        .character {
+            width: 40vw;
+            margin: 15vh 20px 0 20px;
+            border: 2px solid white;
+            background-color: black;
+            border-radius: 10px;
+            padding: 3px;
+            height: 50vh;
+            .content-characters {
+                width: 100%;
+                display: flex;
+                border: 2px solid white;
+                border-radius: 5px;
+                height: 48vh;
+                div#img {
+                    width: 40%;
+                    border-right: 2px solid white;
+                    height: 47vh;
+                    img {
+                        height: 47vh;
+                    }
+                }
+                .infos {
+                    width: 60%;
+                    color: white;
+                    padding: 0px 5px;
+                    p.name {
+                        margin: 7px 0;
+                        text-align: center;
+                    }
+                    p.desc {
+                        height: 35vh;
+                        overflow-y: scroll;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

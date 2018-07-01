@@ -1,0 +1,31 @@
+<ion-content>
+    <ion-row class="inventory">
+        <h2 class="title main">Inventaire</h2>
+        <ion-col class="inventory-stuff">
+            <ion-row class="inventory-content-stuff">
+                <ion-col col-3 class="inventory-content-equiped-stuff">
+                    <h2 class="title">Equipement</h2>
+                    <ion-row class="inventory-in-equiped-stuff">
+                        <ion-item class="inventory-equiped" *ngFor="let stuff of equipedStuffs; let i = index" (click)="playSound()" [navPush]="stuffPush" [navParams]="stuffParamsEquiped[i]">
+                            <img src="{{stuff.sprite}}" />
+                        </ion-item>
+                    </ion-row>
+
+                </ion-col>
+                <ion-col col-9 class="inventory-content-bag-stuff">
+                    <h2 class="title">Sac</h2>
+                    <div class="scroll-content-inventory">
+                        <ion-row>
+                            <ion-col col-2 class="item" *ngFor="let stuff of stuffs; let i = index" (click)="playSound()" [navPush]="stuffPush" [navParams]="stuffParams[i]">
+                                <img src="{{stuff.sprite}}" />
+                            </ion-col>
+                        </ion-row>
+                    </div>
+
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
+    <button ion-button primary full class="button-close" (click)="close()">Fermer</button>
+
+</ion-content>

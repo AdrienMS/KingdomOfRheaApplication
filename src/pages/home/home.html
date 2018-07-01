@@ -1,0 +1,10 @@
+<ion-content class="home">
+    <img src="../../assets/imgs/logo.png" alt="logo" class="logo" />
+    <div class="buttons">
+        <div class="content-buttons">
+            <button *ngIf="is_saved === true" class="continue" ion-button color="light" clear [navPush]="pushGame" [navParams]="status[0]">Continuer</button>
+            <button ion-button color="light" class="new-game" clear [navPush]="pushGame" [navParams]="status[1]">Nouvelle Partie</button>
+            <button ion-button color="light" class="credits" clear>Crédit</button>
+        </div>
+    </div>
+</ion-content>
